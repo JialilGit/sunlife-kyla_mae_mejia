@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#F59E0B">
+    <meta name="description"
+        content="Digital business card for Kyla Mae Mejia - Sun Life Financial Advisor. Save contact details and connect online.">
+
+    <title>Kyla Mae Mejia - Sun Life Financial Advisor</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Calendly Popup Widget CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+    <!-- Google Fonts: Playfair Display, Caveat, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sunGold: '#F59E0B',
+                        sunGoldBright: '#FBBF24',
+                        sunGoldLight: '#FEF08A',
+                        sunNavy: '#0A1128',
+                        sunNavyDark: '#030712',
+                        sunNavyCard: '#101B3B',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        script: ['"Caveat"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #fefce8 0%, #fef08a 40%, #fde047 100%);
+            background-attachment: fixed;
+        }
+
+        /* Sunbeam / Ray Background Watermark Pattern */
+        .sunburst-bg {
+            background-image: radial-gradient(circle at 85% 15%, rgba(251, 191, 36, 0.4) 0%, transparent 60%),
+                radial-gradient(circle at 15% 85%, rgba(245, 158, 11, 0.3) 0%, transparent 50%);
+        }
+
+        .sun-rays {
+            background: repeating-conic-gradient(from 0deg,
+                    rgba(251, 191, 36, 0.12) 0deg 15deg,
+                    transparent 15deg 30deg);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fef08a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #f59e0b;
+            border-radius: 9999px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d97706;
+        }
+
+        /* Button interaction */
+        .action-button {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .action-button:active {
+            transform: scale(0.97);
+        }
+
+        @media (hover: hover) {
+            .action-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px -4px rgba(10, 17, 40, 0.2);
+            }
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+        }
+
+        /* Respect reduced-motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="min-h-screen text-slate-900 flex flex-col items-center justify-start p-0 sm:py-6 m-0 relative overflow-x-hidden sunburst-bg">
+
+    <!-- ==========================================
+         MAIN CARD CONTAINER
+    =========================================== -->
+    <main
+        class="w-full max-w-md bg-gradient-to-b from-amber-50 via-yellow-50/70 to-amber-100/90 min-h-screen sm:min-h-0 sm:rounded-3xl sm:border-2 sm:border-amber-300/80 flex flex-col relative overflow-hidden z-10 shadow-2xl my-0 sm:my-4">
+
+        <!-- Decorative Sun Rays Overlay -->
+        <div class="absolute inset-0 sun-rays opacity-70 pointer-events-none z-0"></div>
+
+        <!-- ==========================================
+            SUN LIFE BRANDING HEADER
+        ========================================== -->
+        <header class="relative z-10 pt-7 px-6 text-center">
+
+            <!-- Sun Life Official Logo -->
+            <div class="flex items-center justify-center mb-2">
+                <img alt="Sun Life"
+                    src="https://www.sunlife.com.ph/content/dam/sunlife/global/logos/sun-life/current/sun-life-weblogo-127x31.svg"
+                    class="h-8 w-auto mx-auto object-contain"
+                    onerror="this.onerror=null; this.src='https://www.sunlife.com/content/dam/sunlife/global/logos/sun-life/current/sun-life-weblogo-127x31.svg';">
+            </div>
+
+            <!-- Sun Life Tagline -->
+            <div class="flex items-center justify-center gap-2 text-[11px] font-semibold text-amber-800 my-1">
+                <span class="h-[1px] w-6 bg-amber-400"></span>
+                <span>Brighter Lives. Better World.</span>
+                <span class="h-[1px] w-6 bg-amber-400"></span>
+            </div>
+
+            <!-- Hero Headline & Cursive Subtext -->
+            <div class="mt-5 mb-3">
+                <h3 class="font-extrabold text-base tracking-tight text-slate-900 uppercase leading-snug">
+                    LET'S BUILD <br>
+                    <span class="gold-gradient-text text-xl sm:text-2xl">A BRIGHTER FUTURE</span>
+                </h3>
+                <p class="font-script text-2xl text-amber-700 font-bold -mt-1 transform -rotate-1">
+                    together. <i class="fa-regular fa-heart text-amber-600 text-lg"></i>
+                </p>
+            </div>
+
+            <!-- Quote Container -->
+            <div
+                class="my-4 px-4 py-3 bg-white/80 backdrop-blur-sm rounded-2xl border border-amber-200/90 shadow-sm text-left relative">
+                <span class="font-serif text-3xl text-amber-500 leading-none absolute -top-1 left-3">“</span>
+                <p class="text-xs text-slate-700 font-medium italic pl-3 pr-2 pt-1 leading-relaxed">
+                    I help you achieve lifetime financial security and live healthier lives through the right solutions
+                    and guidance, every step of the way.
+                </p>
+                <span class="font-serif text-3xl text-amber-500 leading-none absolute -bottom-4 right-3">”</span>
+            </div>
+        </header>
+
+
+        <!-- ==========================================
+             PROFILE & CURVED NAVY BANNER
+        ========================================== -->
+        <section class="relative z-10 flex flex-col items-center mt-2 px-6">
+
+            <!-- Profile Picture Box -->
+            <div class="relative z-20 mb-[-24px]">
+                <div
+                    class="relative w-36 h-36 rounded-full overflow-hidden border-4 border-white bg-amber-100 flex items-center justify-center shadow-xl ring-4 ring-amber-300/60">
+                    <img src="jialil.jpeg" alt="Kyla Mae Mejia" class="w-full h-full object-cover object-top"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x300/0A1128/F59E0B?text=Kyla+Mae+Mejia';"
+                        fetchpriority="high">
+                </div>
+            </div>
+
+            <!-- Dark Navy Curved Banner Badge -->
+            <div
+                class="w-full bg-slate-900 text-white pt-8 pb-4 px-4 rounded-3xl shadow-xl border border-slate-800 text-center relative overflow-hidden">
+
+                <!-- Gold Accent Line -->
+                <div class="absolute top-0 inset-x-0 h-1 gold-gradient-bg"></div>
+
+                <h1 class="font-serif font-bold text-2xl sm:text-3xl tracking-tight text-white mb-1">
+                    Kyla Mae Mejia
+                </h1>
+
+                <!-- Title Banner -->
+                <div class="flex items-center justify-center gap-2 text-xs">
+                    <span class="h-[1px] w-8 bg-amber-400"></span>
+                    <p class="text-amber-400 font-semibold text-xs tracking-wider uppercase">
+                        Financial Advisor
+                    </p>
+                    <span class="h-[1px] w-8 bg-amber-400"></span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SERVICES SECTION ("I CAN HELP YOU WITH")
+        ========================================== -->
+        <section class="relative z-10 px-5 mt-6 mb-4">
+
+            <div class="bg-white/85 backdrop-blur-md rounded-3xl p-5 border border-amber-200/90 shadow-md">
+
+                <!-- Header with line accents -->
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <span class="h-[1px] w-8 bg-amber-400"></span>
+                    <h2 class="text-xs font-extrabold text-slate-900 uppercase tracking-widest text-center">
+                        I CAN HELP YOU WITH:
+                    </h2>
+                    <span class="h-[1px] w-8 bg-amber-400"></span>
+                </div>
+
+                <!-- 2x2 Services Grid -->
+                <div class="grid grid-cols-2 gap-3">
+
+                    <!-- Service 1: Life Insurance -->
+                    <div
+                        class="flex flex-col items-center text-center p-3 rounded-2xl bg-gradient-to-b from-amber-50/80 to-yellow-100/50 border border-amber-200/70 shadow-2xs">
+                        <div
+                            class="w-11 h-11 rounded-full bg-white border-2 border-amber-400 text-slate-900 flex items-center justify-center mb-2 shadow-sm">
+                            <i class="fa-solid fa-users-between-lines text-amber-600 text-base"></i>
+                        </div>
+                        <h3 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight mb-1">
+                            LIFE INSURANCE
+                        </h3>
+                        <p class="text-[10px] text-slate-600 leading-tight">
+                            Protect the people you love.
+                        </p>
+                    </div>
+
+                    <!-- Service 2: Investment Solutions -->
+                    <div
+                        class="flex flex-col items-center text-center p-3 rounded-2xl bg-gradient-to-b from-amber-50/80 to-yellow-100/50 border border-amber-200/70 shadow-2xs">
+                        <div
+                            class="w-11 h-11 rounded-full bg-white border-2 border-amber-400 text-slate-900 flex items-center justify-center mb-2 shadow-sm">
+                            <i class="fa-solid fa-chart-line text-amber-600 text-base"></i>
+                        </div>
+                        <h3 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight mb-1">
+                            INVESTMENT SOLUTIONS
+                        </h3>
+                        <p class="text-[10px] text-slate-600 leading-tight">
+                            Grow your money for your future.
+                        </p>
+                    </div>
+
+                    <!-- Service 3: Health Solutions -->
+                    <div
+                        class="flex flex-col items-center text-center p-3 rounded-2xl bg-gradient-to-b from-amber-50/80 to-yellow-100/50 border border-amber-200/70 shadow-2xs">
+                        <div
+                            class="w-11 h-11 rounded-full bg-white border-2 border-amber-400 text-slate-900 flex items-center justify-center mb-2 shadow-sm">
+                            <i class="fa-solid fa-plus text-amber-600 text-base"></i>
+                        </div>
+                        <h3 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight mb-1">
+                            HEALTH SOLUTIONS
+                        </h3>
+                        <p class="text-[10px] text-slate-600 leading-tight">
+                            Health is wealth. Stay protected.
+                        </p>
+                    </div>
+
+                    <!-- Service 4: Retirement Planning -->
+                    <div
+                        class="flex flex-col items-center text-center p-3 rounded-2xl bg-gradient-to-b from-amber-50/80 to-yellow-100/50 border border-amber-200/70 shadow-2xs">
+                        <div
+                            class="w-11 h-11 rounded-full bg-white border-2 border-amber-400 text-slate-900 flex items-center justify-center mb-2 shadow-sm">
+                            <i class="fa-solid fa-piggy-bank text-amber-600 text-base"></i>
+                        </div>
+                        <h3 class="font-extrabold text-xs text-slate-900 uppercase tracking-tight mb-1">
+                            RETIREMENT PLANNING
+                        </h3>
+                        <p class="text-[10px] text-slate-600 leading-tight">
+                            Plan today for a worry-free tomorrow.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONSULTATION BANNER
+        ========================================== -->
+        <section class="relative z-10 px-5 mb-5">
+
+            <button type="button" onclick="openConsultationModal(event)"
+                class="action-button w-full bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-slate-900 p-4 rounded-2xl border-2 border-amber-300 shadow-lg flex items-center justify-between text-left group">
+
+                <div class="flex items-center gap-3.5">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center text-lg flex-shrink-0 shadow-md">
+                        <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3
+                            class="font-extrabold text-xs sm:text-sm text-slate-900 uppercase tracking-wide leading-tight">
+                            BOOK A FREE FINANCIAL CONSULTATION
+                        </h3>
+                        <p class="text-[11px] text-slate-800 font-medium leading-snug">
+                            Let's talk about your goals and create a plan that's right for you.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-right flex flex-col items-end flex-shrink-0">
+                    <span
+                        class="font-script font-bold text-lg text-slate-900 -mb-1 transform rotate-3 group-hover:scale-110 transition-transform">
+                        Let's talk! <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+
+            </button>
+
+        </section>
+
+
+        <!-- ==========================================
+             DARK NAVY CONTACT HUB (2-COLUMN QUICK BUTTONS)
+        ========================================== -->
+        <section
+            class="relative z-10 mt-auto bg-slate-900 text-white rounded-t-3xl p-5 sm:p-6 border-t-2 border-amber-400/80 shadow-2xl">
+
+            <!-- Save Contact Primary Action Button -->
+            <div class="mb-5">
+                <button type="button" onclick="saveContact()"
+                    class="action-button w-full gold-gradient-bg text-slate-950 font-extrabold py-3.5 px-4 rounded-xl text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg hover:brightness-105 border border-amber-300">
+                    <i class="fa-solid fa-user-plus text-base" aria-hidden="true"></i>
+                    <span>SAVE CONTACT DETAILS</span>
+                </button>
+            </div>
+
+            <!-- 2-Column Quick Action Buttons Grid -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+
+                <!-- 1. Mobile Phone -->
+                <a href="tel:09674289088"
+                    class="action-button flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 min-w-0">
+                    <div
+                        class="w-8 h-8 rounded-lg gold-gradient-bg text-slate-950 flex items-center justify-center flex-shrink-0 font-bold shadow-sm">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[9px] text-amber-400 font-bold uppercase tracking-wider">Mobile Phone</p>
+                        <p class="text-xs font-bold text-white leading-tight break-all">0967 428 9088</p>
+                    </div>
+                </a>
+
+                <!-- 2. WhatsApp -->
+                <a href="https://wa.me/639674289088" target="_blank" rel="noopener noreferrer"
+                    class="action-button flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 min-w-0">
+                    <div
+                        class="w-8 h-8 rounded-lg gold-gradient-bg text-slate-950 flex items-center justify-center flex-shrink-0 font-bold shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[9px] text-amber-400 font-bold uppercase tracking-wider">WhatsApp</p>
+                        <p class="text-xs font-bold text-white leading-tight break-all">0967 428 9088</p>
+                    </div>
+                </a>
+
+                <!-- 3. Email -->
+                <a href="mailto:mejia.kylamae.f@gmail.com"
+                    class="action-button flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 min-w-0">
+                    <div
+                        class="w-8 h-8 rounded-lg gold-gradient-bg text-slate-950 flex items-center justify-center flex-shrink-0 font-bold shadow-sm">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[9px] text-amber-400 font-bold uppercase tracking-wider">Email</p>
+                        <p class="text-[11px] font-semibold text-white leading-snug break-all">mejia.kylamae.f@gmail.com
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 4. Location -->
+                <a href="https://maps.google.com/?q=Umanday,+Bugallon,+Pangasinan" target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-button flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 min-w-0">
+                    <div
+                        class="w-8 h-8 rounded-lg gold-gradient-bg text-slate-950 flex items-center justify-center flex-shrink-0 font-bold shadow-sm">
+                        <i class="fa-solid fa-location-dot text-xs"></i>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[9px] text-amber-400 font-bold uppercase tracking-wider">Location</p>
+                        <p class="text-xs font-bold text-white leading-tight break-words">Umanday, Bugallon, Pangasinan
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 5. Facebook Page -->
+                <button type="button" onclick="triggerAction('https://www.facebook.com/profile.php?id=61567610510376')"
+                    class="action-button text-left flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 min-w-0">
+                    <div
+                        class="w-8 h-8 rounded-lg gold-gradient-bg text-slate-950 flex items-center justify-center flex-shrink-0 font-bold shadow-sm">
+                        <i class="fa-brands fa-facebook-f text-xs"></i>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[9px] text-amber-400 font-bold uppercase tracking-wider">Facebook Page</p>
+                        <p class="text-[11px] font-semibold text-white leading-snug break-words">Kyla Mae Mejia -
+                            SunLife Financial
+                            Advisor </p>
+                    </div>
+                </button>
+
+                <!-- 6. Official Website -->
+                <a href="https://www.sunlife.com.ph" target="_blank" rel="noopener noreferrer"
+                    class="action-button flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-slate-700 min-w-0">
+                    <div
+                        class="w-8 h-8 rounded-lg gold-gradient-bg text-slate-950 flex items-center justify-center flex-shrink-0 font-bold shadow-sm">
+                        <i class="fa-solid fa-globe text-xs"></i>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-[9px] text-amber-400 font-bold uppercase tracking-wider">Official Website</p>
+                        <p class="text-[11px] font-semibold text-white leading-snug break-all">www.sunlife.com.ph</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Quote Container Below Buttons -->
+            <div
+                class="p-4 rounded-2xl bg-gradient-to-br from-slate-800/90 to-slate-900 border border-amber-500/40 text-center relative mt-3">
+                <p class="font-script text-lg sm:text-xl text-amber-300 leading-snug">
+                    "I'm here to help you secure today and achieve tomorrow. <i
+                        class="fa-regular fa-heart text-amber-400 text-sm"></i>"
+                </p>
+            </div>
+
+            <!-- FOOTER BRANDING -->
+            <footer class="mt-6 pt-4 border-t border-slate-800 text-center">
+                <p class="text-xs text-amber-400 font-bold uppercase tracking-wider mb-0.5">
+                    SUN LIFE PHILIPPINES
+                </p>
+                <p class="text-[10px] text-slate-300 flex items-center justify-center gap-1">
+                    <span>A lifetime partner for a brighter life.</span>
+                    <i class="fa-solid fa-sun text-amber-400 text-xs"></i>
+                </p>
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <!-- Calendly Popup Widget Script -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <!-- ==========================================
+         JAVASCRIPT LOGIC
+    =========================================== -->
+    <script>
+        /**
+         * Open Calendly popup modal directly over the page.
+         */
+        function openConsultationModal(e) {
+            if (e) e.preventDefault();
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initPopupWidget({ url: 'https://calendly.com/sunlife-kylamaemejia' });
+            } else {
+                window.open('https://www.sunlife.com.ph', '_blank', 'noopener,noreferrer');
+            }
+            return false;
+        }
+
+        /**
+         * Open links safely.
+         */
+        function triggerAction(url) {
+            if (!url || typeof url !== 'string') return;
+
+            if (url.startsWith('https://') || url.startsWith('http://')) {
+                window.open(url, '_blank', 'noopener,noreferrer');
+            } else {
+                window.location.href = url;
+            }
+        }
+
+        /**
+         * Generate and download a contact card in vCard format for Kyla Mae Mejia.
+         */
+        function saveContact() {
+            const vCardLines = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'N:Mejia;Kyla Mae;;;',
+                'FN:Kyla Mae Mejia',
+                'ORG:Sun Life Philippines',
+                'TITLE:Financial Advisor',
+                'TEL;TYPE=CELL:09674289088',
+                'EMAIL:mejia.kylamae.f@gmail.com',
+                'URL:https://www.sunlife.com.ph',
+                'NOTE:A lifetime partner for a brighter life.',
+                'END:VCARD'
+            ];
+
+            const vCardData = vCardLines.join('\r\n') + '\r\n';
+
+            const blob = new Blob(
+                [vCardData],
+                { type: 'text/vcard;charset=utf-8' }
+            );
+
+            const objectUrl = window.URL.createObjectURL(blob);
+            const downloadLink = document.createElement('a');
+
+            downloadLink.href = objectUrl;
+            downloadLink.download = 'Kyla_Mae_Mejia_SunLife.vcf';
+
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+
+            window.setTimeout(() => {
+                window.URL.revokeObjectURL(objectUrl);
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>
